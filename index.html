@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 Новогодний Опросец 2026 ✨</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Фоновые украшения -->
+    <div class="decoration snowflake-large" style="top: 5%; left: 5%;">
+        <i class="fas fa-snowflake"></i>
+    </div>
+    <div class="decoration gift" style="top: 10%; right: 8%;">
+        <i class="fas fa-gift"></i>
+    </div>
+    <div class="decoration tree" style="bottom: 15%; left: 7%;">
+        <i class="fas fa-tree"></i>
+    </div>
+    <div class="decoration star" style="bottom: 20%; right: 5%;">
+        <i class="fas fa-star"></i>
+    </div>
+    <div class="decoration candy" style="top: 25%; left: 15%;">
+        <i class="fas fa-candy-cane"></i>
+    </div>
+    <div class="decoration bell" style="top: 40%; right: 10%;">
+        <i class="fas fa-bell"></i>
+    </div>
+    
+    <!-- Гирлянды -->
+    <div class="garland garland-top"></div>
+    <div class="garland garland-bottom"></div>
+    
+    <!-- Снег -->
+    <div id="snow-container"></div>
+    
+    <!-- Основной контейнер -->
+    <div class="container">
+        <!-- Заголовок -->
+        <div class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-tree"></i>
+                    <span class="logo-text">Новый<br>Год</span>
+                </div>
+                <h1>🎅 Новогодний Опросец 2026 ✨</h1>
+                <p class="subtitle">Поделитесь своими новогодними традициями и узнайте, насколько ваши ответы совпадают с ответами других участников!</p>
+                <div class="header-icons">
+                    <i class="fas fa-gift"></i>
+                    <i class="fas fa-snowflake"></i>
+                    <i class="fas fa-candy-cane"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-bell"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Основное содержание -->
+        <div class="content">
+            <!-- Страница регистрации -->
+            <div id="register-page" class="page active">
+                <div class="page-header">
+                    <h2><i class="fas fa-user-plus"></i> Регистрация</h2>
+                    <p>Присоединяйтесь к нашему новогоднему опросу и получите персональную статистику!</p>
+                </div>
+                
+                <div class="form-group" id="username-group">
+                    <label for="username"><i class="fas fa-user"></i> Имя пользователя <span class="required">*</span></label>
+                    <input type="text" id="username" placeholder="Введите ваше имя">
+                    <div class="error-message">Пожалуйста, введите имя пользователя</div>
+                </div>
+                
+                <div class="form-group" id="email-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email <span class="required">*</span></label>
+                    <input type="email" id="email" placeholder="example@mail.com">
+                    <div class="error-message">Пожалуйста, введите корректный email</div>
+                </div>
+                
+                <div class="form-group" id="password-group">
+                    <label for="password"><i class="fas fa-lock"></i> Пароль <span class="required">*</span></label>
+                    <input type="password" id="password" placeholder="Не менее 6 символов">
+                    <div class="error-message">Пароль должен содержать не менее 6 символов</div>
+                </div>
+                
+                <div class="form-group" id="confirm-password-group">
+                    <label for="confirm-password"><i class="fas fa-lock"></i> Подтверждение пароля <span class="required">*</span></label>
+                    <input type="password" id="confirm-password" placeholder="Повторите пароль">
+                    <div class="error-message">Пароли не совпадают</div>
+                </div>
+                
+                <button id="register-btn" class="btn btn-primary">
+                    <i class="fas fa-user-plus"></i> Зарегистрироваться
+                </button>
+                
+                <div class="page-footer">
+                    <p>Уже есть аккаунт? <a href="#" id="login-link">Войти</a></p>
+                </div>
+            </div>
+            
+            <!-- Страница входа -->
+            <div id="login-page" class="page">
+                <div class="page-header">
+                    <h2><i class="fas fa-sign-in-alt"></i> Вход в систему</h2>
+                    <p>Войдите в свой аккаунт, чтобы продолжить участие в опросе</p>
+                </div>
+                
+                <div class="form-group" id="login-email-group">
+                    <label for="login-email"><i class="fas fa-envelope"></i> Email <span class="required">*</span></label>
+                    <input type="email" id="login-email" placeholder="example@mail.com">
+                    <div class="error-message">Пожалуйста, введите email</div>
+                </div>
+                
+                <div class="form-group" id="login-password-group">
+                    <label for="login-password"><i class="fas fa-lock"></i> Пароль <span class="required">*</span></label>
+                    <input type="password" id="login-password" placeholder="Введите ваш пароль">
+                    <div class="error-message">Пожалуйста, введите пароль</div>
+                </div>
+                
+                <button id="login-btn" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt"></i> Войти
+                </button>
+                
+                <div class="page-footer">
+                    <p>Нет аккаунта? <a href="#" id="register-link">Зарегистрироваться</a></p>
+                    <p><a href="#" id="admin-login-link" class="admin-link">
+                        <i class="fas fa-user-shield"></i> Войти как администратор
+                    </a></p>
+                </div>
+            </div>
+            
+            <!-- Страница входа администратора -->
+            <div id="admin-login-page" class="page">
+                <div class="page-header">
+                    <h2><i class="fas fa-lock"></i> Вход для администратора</h2>
+                    <p>Только для администраторов системы</p>
+                </div>
+                
+                <div class="form-group" id="admin-password-group">
+                    <label for="admin-password"><i class="fas fa-key"></i> Пароль администратора <span class="required">*</span></label>
+                    <input type="password" id="admin-password" placeholder="Введите пароль">
+                    <div class="error-message">Неверный пароль</div>
+                </div>
+                
+                <button id="admin-login-btn" class="btn btn-primary">
+                    <i class="fas fa-user-shield"></i> Войти
+                </button>
+                
+                <div class="page-footer">
+                    <p><a href="#" id="back-to-login-link">
+                        <i class="fas fa-arrow-left"></i> Вернуться к обычному входу
+                    </a></p>
+                </div>
+            </div>
+            
+            <!-- Страница опроса -->
+            <div id="survey-page" class="page">
+                <div class="user-info">
+                    <div class="user-info-content">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <span class="user-label">Вы вошли как:</span>
+                            <span id="current-user" class="username"></span>
+                        </div>
+                    </div>
+                    <button id="logout-btn" class="btn btn-secondary btn-small">
+                        <i class="fas fa-sign-out-alt"></i> Выйти
+                    </button>
+                </div>
+                
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span>Прогресс заполнения</span>
+                        <span id="progress-percent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" id="survey-progress"></div>
+                    </div>
+                </div>
+                
+                <div class="question-counter">
+                    <div class="counter-box">
+                        <i class="fas fa-question-circle"></i>
+                        <div>Вопрос <span id="current-question">1</span> из <span id="total-questions">20</span></div>
+                    </div>
+                </div>
+                
+                <div class="question-navigation" id="question-navigation">
+                    <!-- Навигация создается через JS -->
+                </div>
+                
+                <div id="question-container">
+                    <!-- Вопросы загружаются через JS -->
+                </div>
+                
+                <div class="button-group">
+                    <button id="prev-btn" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Назад
+                    </button>
+                    <button id="next-btn" class="btn btn-primary">
+                        Далее <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button id="submit-survey-btn" class="btn btn-success" style="display: none;">
+                        <i class="fas fa-check-circle"></i> Завершить опрос
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Страница статистики пользователя -->
+            <div id="user-stats-page" class="page">
+                <div class="stats-header">
+                    <h2><i class="fas fa-chart-pie"></i> Ваша новогодняя статистика</h2>
+                    <p>Результаты вашего участия в опросе</p>
+                </div>
+                
+                <div class="match-card" id="match-card">
+                    <!-- Заполняется через JS -->
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-box personal-stats">
+                        <h3><i class="fas fa-user-check"></i> Ваши ответы</h3>
+                        <div id="personal-answers"></div>
+                    </div>
+                    
+                    <div class="stat-box common-stats">
+                        <h3><i class="fas fa-users"></i> Совпадения с другими</h3>
+                        <div id="common-answers"></div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="back-to-main" class="btn btn-secondary">
+                        <i class="fas fa-home"></i> На главную
+                    </button>
+                    <button id="view-admin-from-stats" class="btn btn-primary">
+                        <i class="fas fa-chart-bar"></i> Общая статистика
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Страница подтверждения -->
+            <div id="confirmation-page" class="page">
+                <div class="confirmation-content">
+                    <div class="confetti-container">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h2><i class="fas fa-check-circle"></i> Спасибо за участие!</h2>
+                    <p class="confirmation-text">Ваши ответы успешно сохранены! Теперь вы можете посмотреть статистику.</p>
+                    
+                    <div class="confirmation-buttons">
+                        <button id="back-to-survey-btn" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Вернуться
+                        </button>
+                        <button id="view-stats-btn" class="btn btn-primary">
+                            <i class="fas fa-chart-bar"></i> Посмотреть статистику
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Админ-панель -->
+            <div id="admin-page" class="page">
+                <div class="admin-header">
+                    <div class="admin-info">
+                        <div class="admin-title">
+                            <i class="fas fa-user-shield"></i>
+                            <div>
+                                <h2>Панель администратора</h2>
+                                <span>Вы вошли как администратор</span>
+                            </div>
+                        </div>
+                        <button id="admin-logout-btn" class="btn btn-secondary btn-small">
+                            <i class="fas fa-sign-out-alt"></i> Выйти
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="admin-controls">
+                    <div class="admin-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <span class="stat-value" id="total-participants">0</span>
+                                <span class="stat-label">Участников</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-file-alt"></i>
+                            <div>
+                                <span class="stat-value" id="total-answers">0</span>
+                                <span class="stat-label">Ответов</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-percentage"></i>
+                            <div>
+                                <span class="stat-value" id="completion-rate">0%</span>
+                                <span class="stat-label">Заполнено</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="control-buttons">
+                        <button id="refresh-data-btn" class="btn btn-small">
+                            <i class="fas fa-sync-alt"></i> Обновить
+                        </button>
+                        <button id="export-data-btn" class="btn btn-small btn-secondary">
+                            <i class="fas fa-file-export"></i> Экспорт
+                        </button>
+                        <button id="change-password-btn" class="btn btn-small btn-warning">
+                            <i class="fas fa-key"></i> Пароль
+                        </button>
+                        <button id="clear-data-btn" class="btn btn-small btn-danger">
+                            <i class="fas fa-trash-alt"></i> Очистить
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="tabs">
+                    <button class="tab active" data-tab="stats-tab">
+                        <i class="fas fa-chart-bar"></i> Статистика
+                    </button>
+                    <button class="tab" data-tab="responses-tab">
+                        <i class="fas fa-table"></i> Все ответы
+                    </button>
+                    <button class="tab" data-tab="matches-tab">
+                        <i class="fas fa-users"></i> Совпадения
+                    </button>
+                </div>
+                
+                <!-- Вкладка статистики -->
+                <div id="stats-tab" class="tab-content active">
+                    <div id="stats-container" class="stats-container">
+                        <!-- Статистика загружается через JS -->
+                    </div>
+                </div>
+                
+                <!-- Вкладка всех ответов -->
+                <div id="responses-tab" class="tab-content">
+                    <div class="admin-panel">
+                        <div class="table-container">
+                            <table class="responses-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Пользователь</th>
+                                        <th>Email</th>
+                                        <th>Традиции</th>
+                                        <th>Планы</th>
+                                        <th>Подарок</th>
+                                        <th>Ожидания</th>
+                                        <th>Фильм</th>
+                                        <th>Дата</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="responses-table-body">
+                                    <!-- Данные загружаются через JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Вкладка совпадений -->
+                <div id="matches-tab" class="tab-content">
+                    <div class="admin-panel">
+                        <div class="table-container">
+                            <table class="matches-table">
+                                <thead>
+                                    <tr>
+                                        <th>Пользователь</th>
+                                        <th>Совпадение</th>
+                                        <th>Вопросы</th>
+                                        <th>Процент</th>
+                                        <th>Дата</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="matches-table-body">
+                                    <!-- Данные загружаются через JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Футер -->
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-icons">
+                    <i class="fas fa-tree"></i>
+                    <i class="fas fa-gift"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-snowflake"></i>
+                </div>
+                <p>🎄 Новогодний Опросец 2026 ✨ | Все ответы анонимны</p>
+                <p class="footer-note"><i class="fas fa-info-circle"></i> Данные хранятся локально в вашем браузере</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Уведомления -->
+    <div id="notification" class="notification"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
